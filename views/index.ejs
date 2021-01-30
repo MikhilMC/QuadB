@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav> -->
+    <img src="./images/Screenshot from 2021-01-30 10-03-43.png" alt="menu" id="menu-image">
+    <div class="p-5">
+      <table class="table table-dark table-borderless table-sm">
+        <thead>
+          <tr>
+            <th scope="col" class="text-muted">#</th>
+            <th scope="col" class="text-muted">name</th>
+            <th scope="col" class="text-muted">Last</th>
+            <th scope="col" class="text-muted">Buy/Sell Price</th>
+            <th scope="col" class="text-muted">volume</th>
+            <th scope="col" class="text-muted">base_unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i = 0; i < arr.length; i++) { %> 
+            <tr>
+              <td><%=i+1%></td>
+              <td><%=arr[i].name%></td>
+              <td>₹ <%=arr[i].last%></td>
+              <td>₹ <%=arr[i].buy%> / ₹ <%=arr[i].sell%></td>
+              <td><%=arr[i].volume%></td>
+              <td><%=arr[i].base_unit%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+    <!-- Bootstrap Javascript, jQuery, and Popper.js -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
